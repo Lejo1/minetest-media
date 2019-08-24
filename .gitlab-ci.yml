@@ -1,0 +1,12 @@
+pages:
+  stage: deploy
+  script:
+  - apt-get update -qy
+  - apt-get install -y python
+  - python make_index_mth.py
+  - mv media public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
