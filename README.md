@@ -3,6 +3,8 @@ Static Remote Media Server
 
 A static Minetest Media Server done simple.
 
+Also contains some tools to create and maintain a media server.
+
 ### Why static?
 For all other remote media services you need a paid root server.  
 But you can everywhere get a simple static webserver where you just need to upload the medias.  
