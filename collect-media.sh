@@ -25,7 +25,7 @@ mkdir -p $MEDIADIR
 while read "p"; do
 	echo "Loading and Extracting: $p"
 	mkdir -p tmp
-  curl -L "$p" > download.zip
+  curl -L --retry 2 --retry-delay 60 "$p" > download.zip
 	unzip -qn download.zip -d tmp
 	# For special cases saving perms in zip files:
 	chmod -R +rwx tmp
